@@ -19,7 +19,7 @@ aside {
     margin-top: $spacing * 24;
     .nav-item {
       color: $black-80;
-      font-family: 'Noto Serif', serif;
+      font-family: $font-serif;
       display: block;
       &:hover {
         color: $black-60;
@@ -32,7 +32,7 @@ aside {
       }
       .nav-description {
         color: $black-60;
-        font-family: 'Noto Sans', sans-serif;
+        font-family: $font-sans;
         display: block;
         font-size: 0.8125rem;
         margin-top: $spacing * 1.5;

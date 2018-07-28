@@ -376,7 +376,7 @@ template {
 
 html,
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-size: 16px;
   background: #ffffff;
   color: rgba(0, 0, 0, 0.8);
@@ -397,7 +397,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-weight: 700;
   margin: 0;
   line-height: 1.25em;
@@ -488,7 +488,7 @@ aside nav {
 
 aside nav .nav-item {
   color: rgba(0, 0, 0, 0.8);
-  font-family: 'Noto Serif', serif;
+  font-family: "Noto Serif", serif;
   display: block;
 }
 
@@ -505,7 +505,7 @@ aside nav .nav-item + .nav-item {
 
 aside nav .nav-item .nav-description {
   color: rgba(0, 0, 0, 0.6);
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   display: block;
   font-size: 0.8125rem;
   margin-top: 6px;
@@ -535,5 +535,43 @@ aside .social-nav a:hover svg {
 
 aside .social-nav a + a {
   margin-left: 32px;
+}
+
+.post-excerpt {
+  background: #ffffff;
+  padding: 72px 96px;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+}
+
+.post-excerpt .title a {
+  font-family: "Noto Serif", serif;
+  font-size: 2.25rem;
+  display: block;
+  margin-bottom: 48px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.post-excerpt .title a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.post-excerpt .exerpt {
+  font-family: "Noto Serif", serif;
+  font-size: 1.125rem;
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 1.65em;
+}
+
+.post-excerpt .read-more {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-top: 24px;
+}
+
+#posts-index .post-excerpt + .post-excerpt {
+  margin-top: 96px;
 }
 

@@ -1,5 +1,5 @@
 html, body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: $font-sans;
   font-size: 16px;
   background: $white;
   color: $black-80;
@@ -14,7 +14,7 @@ html, body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: $font-sans;
   font-weight: 700;
   margin: 0;
   line-height: $lh-default;
