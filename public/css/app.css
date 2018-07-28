@@ -444,6 +444,15 @@ textarea {
   min-height: 100%;
 }
 
+@media (max-width: 60rem) {
+  #app {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 aside {
   background: #ffffff;
   -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
@@ -456,6 +465,12 @@ aside {
       flex-shrink: 0;
 }
 
+@media (max-width: 80rem) {
+  aside {
+    width: 336px;
+  }
+}
+
 main {
   background: #f5f8fa;
   padding: 72px 96px;
@@ -464,19 +479,34 @@ main {
           flex-grow: 1;
 }
 
+@media (max-width: 80rem) {
+  main {
+    padding: 48px;
+  }
+}
+
+@media (max-width: 30rem) {
+  main {
+    padding: 0;
+    background-color: #ffffff;
+  }
+}
+
 aside .sidebar-content {
   width: 432px;
   padding: 72px 96px;
 }
 
-aside .sidebar-content.fixed-top {
-  position: fixed;
-  top: 0;
-}
+@media not all and (max-width: 80rem) {
+  aside .sidebar-content.fixed-top {
+    position: fixed;
+    top: 0;
+  }
 
-aside .sidebar-content.fixed-bottom {
-  position: fixed;
-  bottom: 0;
+  aside .sidebar-content.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+  }
 }
 
 aside header h1 a {
@@ -551,6 +581,39 @@ aside .social-nav a + a {
   margin-left: 32px;
 }
 
+@media (max-width: 80rem) {
+  aside .sidebar-content {
+    width: 336px;
+    padding: 48px;
+  }
+}
+
+@media (max-width: 60rem) {
+  aside {
+    width: auto;
+  }
+
+  aside .sidebar-content {
+    width: auto;
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+
+  aside nav {
+    margin-top: 48px;
+  }
+
+  aside .social-nav {
+    margin-top: 48px;
+  }
+}
+
+@media (max-width: 30rem) {
+  aside .sidebar-content {
+    padding: 48px;
+  }
+}
+
 .post-excerpt {
   background: #ffffff;
   padding: 72px 96px;
@@ -585,7 +648,36 @@ aside .social-nav a + a {
   margin-top: 24px;
 }
 
+@media (max-width: 80rem) {
+  .post-excerpt {
+    padding: 48px;
+  }
+
+  .post-excerpt .title a {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 30rem) {
+  .post-excerpt {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
 #posts-index .post-excerpt + .post-excerpt {
   margin-top: 96px;
+}
+
+@media (max-width: 80rem) {
+  #posts-index .post-excerpt + .post-excerpt {
+    margin-top: 48px;
+  }
+}
+
+@media (max-width: 30rem) {
+  #posts-index .post-excerpt + .post-excerpt {
+    margin-top: 0;
+  }
 }
 

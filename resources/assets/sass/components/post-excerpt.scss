@@ -29,3 +29,18 @@
     margin-top: $spacing * 6;
   }
 }
+@media (max-width: 80rem) {
+  .post-excerpt {
+    padding: $spacing * 12;
+
+    .title a {
+      margin-bottom: $spacing * 6;
+    }
+  }
+}
+
+@media (max-width: 30rem) {
+  .post-excerpt {
+    box-shadow: none;
+  }
+}
