@@ -1,4 +1,16 @@
 aside {
+  .sidebar-content {
+    width: 240px + $spacing * 48;
+    padding: $spacing * 18 $spacing * 24;
+    &.fixed-top {
+      position: fixed;
+      top: 0;
+    }
+    &.fixed-bottom {
+      position: fixed;
+      bottom: 0;
+    }
+  }
   header {
     h1 a {
       font-size: 1.725rem;

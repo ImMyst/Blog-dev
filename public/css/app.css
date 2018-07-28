@@ -446,7 +446,6 @@ textarea {
 
 aside {
   background: #ffffff;
-  padding: 72px 96px;
   -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
   width: 432px;
@@ -463,6 +462,21 @@ main {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+aside .sidebar-content {
+  width: 432px;
+  padding: 72px 96px;
+}
+
+aside .sidebar-content.fixed-top {
+  position: fixed;
+  top: 0;
+}
+
+aside .sidebar-content.fixed-bottom {
+  position: fixed;
+  bottom: 0;
 }
 
 aside header h1 a {
