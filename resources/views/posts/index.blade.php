@@ -2,4 +2,4 @@
 
 @section ('content')
     Posts Index
-    @stop
+@stop
