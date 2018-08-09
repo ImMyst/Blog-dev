@@ -1,22 +1,43 @@
-
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
 require('./bootstrap');
 
 window.Vue = require('vue');
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
-
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    data () {
+      return {
+        sidebar: {
+          height: 0,
+          windowHeight: 0,
+          windowScrollTop: 0
+        }
+      }
+    },
+  computed: {
+    sidebarStyles() {
+      if (this.sidebar.height <= this.sidebar.windowHeight)
+        return { 'fixed-top': true }
+      if ((this.sidebar.windowScrollTop + this.sidebar.windowHeight) > this.sidebar.height)
+        return { 'fixed-bottom': true}
+    }
+  },
+    created () {
+      window.addEventListener('resize', this.handleResize)
+      window.addEventListener('scroll', this.handleScroll)
+    },
+    mounted () {
+      this.calculateSidebar()
+    },
+    methods: {
+      handleResize: _.throttle(function () {
+        this.calculateSidebar()
+      }, 100),
+      handleScroll: _.throttle(function () {
+        this.sidebar.windowScrollTop = window.pageYOffset || document.documentElement.scrollTop
+      }, 100),
+      calculateSidebar() {
+        this.sidebar.height = this.$refs.sidebarContent.offsetHeight
+        this.sidebar.windowHeight = window.innerHeight
+      }
+    }
 });

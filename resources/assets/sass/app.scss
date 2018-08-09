@@ -1,14 +1,17 @@
-
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-
-// Variables
+@import "~normalize.css/normalize";
+@import "colors";
 @import "variables";
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// Layout
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
+@import "layout/html";
+@import "layout/layout";
+@import "layout/sidebar";
+
+// Components
+
+@import "components/post-excerpt";
+
+// Pages
+
+@import "pages/posts-index";
